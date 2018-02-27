@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+    input:invalid {
+      background-color: #ffdddd;
+    }
+    </style>
+
+</head>
+<body>
+  <h1 style="margin-bottom: 60px">American or European Sales Tax Calculator</h1>
+
+
+  <ol>
+    <div>
+      <li style="margin-bottom: 45px">Please enter the number(s) you wish to add then press Enter or click the ' + ' button.<br><br>
+                                      Click subtotal when you are ready to calculate the tax amount.</li>
+        <p id="displayNum"></p>
+        <input type="number" id="numbers" min="0" required>
+        <button id="add" onclick="add()">+</button>
+        <br><br>
+        <button id="subtotal" onclick="subtotal()">Subtotal</button>
+        <p id="displaySum"></p><br>
+    </div>
+
+    <div style="margin: 20px 0">
+      <li>Please make a tax selection then click calculate.</li>
+        <select id="tax">
+          <option></option>
+          <option>American Sales Tax</option>
+          <option>European Sales Tax</option>
+        </select>
+        <button id="submit" onclick="calculate()" style="margin-left: 10px">Calculate</button>
+    </div>
+  <div>
+    <p id="result"></p>
+  </div>
+
+  <script src="calculator.js"></script>
+
+</body>
